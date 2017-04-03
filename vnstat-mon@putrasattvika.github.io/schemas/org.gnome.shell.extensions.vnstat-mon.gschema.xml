@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schemalist>
+	<schema path="/org/gnome/shell/extensions/vnstat-mon/" id="org.gnome.shell.extensions.vnstat-mon" >
+		<key type="s" name="interface">
+			<default>"wlp3s0"</default>
+			<summary>The network interface to monitor.</summary>
+		</key>
+	</schema>
+</schemalist>

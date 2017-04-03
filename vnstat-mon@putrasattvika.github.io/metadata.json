@@ -1,0 +1,9 @@
+{
+ "extension-id": "vnstat-mon",
+ "uuid": "vnstat-mon@putrasattvika.github.io",
+ "settings-schema": "org.gnome.shell.extensions.vnstat-mon",
+ "gettext-domain": "gnome-shell-extensions",
+ "name": "VNStat Monitor",
+ "description": "VNStat Monitor",
+ "shell-version": [ "3.22" ]
+}
