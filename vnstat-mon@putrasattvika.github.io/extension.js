@@ -45,10 +45,10 @@ const VnstatIndicator = new Lang.Class({
     this.menu.addMenuItem(this.item);
     this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem());
 
-    cmd = "sh -c \"ls /sys/class/net/ -l | awk '{print $9}'\"";
+    cmd = "sh -c \"ls /sys/class/net/ -1\"";
     let [res, out, err] = GLib.spawn_command_line_sync(cmd);    
     let interfaces = out.toString().split("\n");
-    interfaces = interfaces.slice(1, interfaces.length - 1);
+    interfaces = interfaces.slice(0, interfaces.length - 1);
 
     for (let interface of interfaces) {
       if (currentInterface != interface) {

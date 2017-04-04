@@ -28,10 +28,10 @@ const VnstatmonPrefsWidget = new GObject.Class({
 		this.set_orientation(Gtk.Orientation.VERTICAL);
 		this._settings = Convenience.getSettings();
 
-		cmd = "sh -c \"ls /sys/class/net/ -l | awk '{print $9}'\"";
+		cmd = "sh -c \"ls /sys/class/net/ -1\"";
     	let [res, out, err] = GLib.spawn_command_line_sync(cmd);
     	interfaces = out.toString().split("\n");
-    	interfaces = interfaces.slice(1, interfaces.length);
+    	interfaces = interfaces.slice(0, interfaces.length);
 
         label = new Gtk.Label({
             label: _('Network interface'),
